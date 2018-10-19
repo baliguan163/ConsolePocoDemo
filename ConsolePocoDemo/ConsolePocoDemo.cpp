@@ -48,7 +48,7 @@ class TimerExample
 public:
 	void onTimer(Poco::Timer &timer)
 	{
-		cout << "func : " << __FUNCTION__ << endl;
+		cout << "func:" << __FUNCTION__ << endl;
 	}
 };
 
@@ -57,7 +57,7 @@ class HelloRunnable : public Poco::Runnable
 {
 	virtual void run()
 	{
-		cout << "Hello, bingzhe" << std::endl;
+		cout << "Hello,bingzhe" << std::endl;
 	}
 };
 
@@ -74,6 +74,8 @@ int main(int argc, char** argv)
 	HelloRunnable runnable;
 	Poco::ThreadPool::defaultPool().start(runnable);
 	Poco::ThreadPool::defaultPool().joinAll();
+
+	//3.test----------------------------------------
 
 	getchar();
 	return 0;
